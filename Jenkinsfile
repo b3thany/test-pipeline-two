@@ -7,7 +7,5 @@ pipeline {
       }
     }
   }
-  triggers {
-    eventTrigger(simpleMatch('Frobulate'))
-  }
+  triggers {eventTrigger(simpleMatch('Frobulate'))}
 }
