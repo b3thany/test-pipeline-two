@@ -1,12 +1,12 @@
 pipeline {
   agent any
     triggers {
-        eventTrigger simpleMatch("frobulate")
+        eventTrigger simpleMatch("Frobulate")
     }
   stages {
     stage('Received frobulate') {
       steps {
-        echo 'Received a frobulate event'
+        echo 'Received a Frobulate event'
       }
     }
   }
