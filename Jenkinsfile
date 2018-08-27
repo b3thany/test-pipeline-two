@@ -6,6 +6,16 @@ pipeline {
         echo 'Received a Frobulate event'
       }
     }
+    stage('Raise Happify') {
+      steps {
+        script {
+          publishEvent simpleEvent('Happify')
+        }
+
+      }
+    }
   }
-  triggers {eventTrigger(simpleMatch('Frobulate'))}
+  triggers {
+    eventTrigger(simpleMatch('Frobulate'))
+  }
 }
