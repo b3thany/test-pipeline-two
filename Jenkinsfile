@@ -3,11 +3,11 @@ pipeline {
   stages {
     stage('Received an event') {
       steps {
-        echo 'I just received a Testing Completed! event'
+        echo 'I just received a testingCompleted event'
       }
     }
   }
   triggers {
-    eventTrigger(simpleMatch('Testing Completed!'))
+    eventTrigger(simpleMatch('testingCompleted'))
   }
 }
